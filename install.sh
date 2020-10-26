@@ -17,7 +17,7 @@ done
 echo ""
 SSAKINS_HOME=`pwd`
 sudo chown 1000 $SSAKINS_HOME/ssakins_home
-echo "set SSAKINS_HOME directory owned by root."
+echo "["`date`"] set SSAKINS_HOME directory owned by root."
 sleep 1
 
 sudo docker run --name "ssakins" -u 'root' -v $SSAKINS_HOME/ssakins_home/:/var/jenkins_home/ -p 8000:8080 -d phm0127/ssakins
