@@ -26,7 +26,7 @@ done
 echo ""
 
 
-sudo docker exec -u root test sh /sh/initPassword.sh
+sudo docker exec -u root ssakins sh /sh/initPassword.sh
 sleep 1
 echo "  #####    #####     ###    ##  ##    ####    ##   ##   #####
  ##   ##  ##   ##   ## ##   ##  ##     ##     ###  ##  ##   ##
