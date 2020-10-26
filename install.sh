@@ -14,7 +14,7 @@ for n in `seq 0 10` ; do
     sp=${sp#?}${sp%???}
 done
 echo ""
-sudo docker run --name ssakins -p 8000:8080 -d phm0127/ssakins
+sudo docker run --name "ssakins" -v ./ssakins_home/:/var/jenkins_home/ -p 8000:8080 -d phm0127/ssakins
 echo -n "["`date`"] run SSAKINS on docker... "
 
 printf ' '
@@ -26,8 +26,6 @@ done
 echo ""
 
 
-sudo docker exec -u root test sh /sh/initPassword.sh
-sleep 1
 echo "  #####    #####     ###    ##  ##    ####    ##   ##   #####
  ##   ##  ##   ##   ## ##   ##  ##     ##     ###  ##  ##   ##
  ##       ##       ##   ##  ## ##      ##     #### ##  ##
